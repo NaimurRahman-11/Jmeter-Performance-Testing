@@ -30,6 +30,11 @@ The project includes load testing, stress testing, and dynamic transaction simul
 ### Booking API Jmeter Summary Report (5 minutes load)
 ![5minutes](https://github.com/user-attachments/assets/79e8a802-cea0-45d9-8c6d-156877facf0d)
 
+### Load Test Steps in Excel Sheet
+![Load Test Data](https://github.com/user-attachments/assets/d90fd92a-aef0-4163-a109-cced4b0b2884)
+
+### Stress Test Steps in Excel Sheet
+![Stress Test Data](https://github.com/user-attachments/assets/1e264cc2-cd42-4b3f-98e7-2247e6ddfa9d)
 
 ### Dmoney API Performance Testing Request Summary and Statistics
 ![DmoneyJmeterReport1](https://github.com/user-attachments/assets/c525762c-d19f-4d61-88aa-fec721838c17)
@@ -103,10 +108,44 @@ The project includes load testing, stress testing, and dynamic transaction simul
 - Breakdown server performance in steps and capture stress points.
 
 ---
+### Dmoney API Test
+
+- Set up JMeter: Open JMeter.
+
+- Load the dmoney.jmx file.
+
+- Use admin credentials to generate a token.
+
+- Configure the following CSV files in the resources/ folder: deposit.csv, sendMoney.csv, payment.csv
+
+- Ensure each thread uses the correct CSV file for dynamic data.
+
+### Transactions:
+
+#### Deposit:
+
+- 5 agents deposit for 10 customers.
+
+#### Send Money:
+
+- 5 customers send money to another 10 customers.
+
+#### Payment:
+
+- 5 customers make payments to 2 merchants.
+
+#### Ramp-Up Time:
+
+- Each thread has a ramp-up time of 120 seconds.
+
+#### Assertions:
+
+- Add assertions to verify successful transactions.
+---
 
 ## Reports
 
-Load Test and Stress Test results are in booking-api-test-report.xlsx under respective tabs (load test report, stress test report).
+Load Test and Stress Test results are in `booking-api-test-report.xlsx` under respective tabs (load test report, stress test report).
 
 HTML reports are available in the Reports folder.
 
